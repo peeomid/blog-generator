@@ -20,13 +20,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Sahaja Yoga', 'http://www.sahajayoga.org/'),)
+LINKS = (('Sahaja Yoga', 'http://www.sahajayoga.org/'),
+        ('Blog', '/blog'),)
 
 # Social widget
 SOCIAL = (('linkedin', 'https://www.linkedin.com/in/luantn'),
           ('github', 'https://github.com/peeomid'),
           ('google', 'https://plus.google.com/+LuanNguyenPeeomid'),
-          ('rss', '//blog.peeomid.com/feeds/all.atom.xml'))
+          ('rss', 'http://blog.peeomid.com/feeds/all.atom.xml'))
 
 
 DEFAULT_PAGINATION = 5
@@ -61,9 +62,8 @@ ARTICLE_URL = 'blog/{slug}.html'
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
 
 # we need to change the main index page now though...
-# SITEURL = '/blog'
-# INDEX_SAVE_AS = 'blog/index.html'
-# INDEX_URL = 'blog/'
+INDEX_SAVE_AS = 'blog/index.html'
+INDEX_URL = 'blog/'
 
 #now move all the category and tag stuff to that blog/ dir as well
 CATEGORY_URL = 'blog/category/{slug}.html'
@@ -79,5 +79,25 @@ ARCHIVES_URL = 'blog/archives/archives.html'
 AUTHOR_SAVE_AS = 'blog/{slug}.html'
 AUTHORS_SAVE_AS = 'blog/authors.html'
 # put pages in the root directory
-# PAGE_SAVE_AS = '{slug}.html'
-# PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = '{slug}.html'
+PAGE_URL = '{slug}.html'
+
+PLUGINS=['extended_sitemap',]
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
+
+# STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico']
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}

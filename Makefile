@@ -28,6 +28,12 @@ DROPBOX_DIR=~/Dropbox/Public/
 GITHUB_PAGES_BRANCH=gh-pages:master
 GITHUB_PAGES_REPO=git@github.com:peeomid/peeomid.github.io.git
 
+PAGESDIR=$(INPUTDIR)/pages
+DATE := $(shell date +'%Y-%m-%d %H:%M:%S')
+SLUG := $(shell echo '${NAME}' | sed -e 's/[^[:alnum:]]/-/g' | tr -s '-' | tr A-Z a-z)
+EXT ?= md
+
+
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -119,7 +125,48 @@ cf_upload: publish
 	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
 github: publish
-	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
+	ghp-import -m "Generate Pelican site" $(OUTPUTDIR)
 	git push $(GITHUB_PAGES_REPO) $(GITHUB_PAGES_BRANCH)
 
 .PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
+
+newpost:
+ifdef NAME
+		echo "Title: $(NAME)" >  $(INPUTDIR)/$(SLUG).$(EXT)
+		echo "Slug: $(SLUG)" >> $(INPUTDIR)/$(SLUG).$(EXT)
+		echo "Date: $(DATE)" >> $(INPUTDIR)/$(SLUG).$(EXT)
+		echo ""              >> $(INPUTDIR)/$(SLUG).$(EXT)
+		echo ""              >> $(INPUTDIR)/$(SLUG).$(EXT)
+		${EDITOR} ${INPUTDIR}/${SLUG}.${EXT} &
+else
+		@echo 'Variable NAME is not defined.'
+		@echo 'Do make newpost NAME='"'"'Post Name'"'"
+endif
+
+editpost:
+ifdef NAME
+		${EDITOR} ${INPUTDIR}/${SLUG}.${EXT} &
+else
+		@echo 'Variable NAME is not defined.'
+		@echo 'Do make editpost NAME='"'"'Post Name'"'"
+endif
+
+newpage:
+ifdef NAME
+		echo "Title: $(NAME)" >  $(PAGESDIR)/$(SLUG).$(EXT)
+		echo "Slug: $(SLUG)" >> $(PAGESDIR)/$(SLUG).$(EXT)
+		echo ""              >> $(PAGESDIR)/$(SLUG).$(EXT)
+		echo ""              >> $(PAGESDIR)/$(SLUG).$(EXT)
+		${EDITOR} ${PAGESDIR}/${SLUG}.$(EXT)
+else
+		@echo 'Variable NAME is not defined.'
+		@echo 'Do make newpage NAME='"'"'Page Name'"'"
+endif
+
+editpage:
+ifdef NAME
+		${EDITOR} ${PAGESDIR}/${SLUG}.$(EXT)
+else
+		@echo 'Variable NAME is not defined.'
+		@echo 'Do make editpage NAME='"'"'Page Name'"'"
+endif
