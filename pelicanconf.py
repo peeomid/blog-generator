@@ -27,7 +27,7 @@ LINKS = (('Sahaja Yoga', 'http://www.sahajayoga.org/'),
 SOCIAL = (('linkedin', 'https://www.linkedin.com/in/luantn'),
           ('github', 'https://github.com/peeomid'),
           ('google', 'https://plus.google.com/+LuanNguyenPeeomid'),
-          ('rss', 'http://blog.peeomid.com/feeds/all.atom.xml'))
+          ('rss', 'http://peeomid.com/feeds/all.atom.xml'))
 
 
 DEFAULT_PAGINATION = 5
@@ -99,5 +99,5 @@ SITEMAP = {
 }
 
 # STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico']
-STATIC_PATHS = ['images']
-# EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
