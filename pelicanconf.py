@@ -99,5 +99,5 @@ SITEMAP = {
 }
 
 # STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico']
-STATIC_PATHS = ['images', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['images']
+# EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
