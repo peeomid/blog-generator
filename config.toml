@@ -1,55 +1,28 @@
 baseurl = "https://peeomid.com/"
-title = "Peeomid Profile"
-theme = "hugo-creative-portfolio-theme"
-languageCode = "en-us"
-# Enable comments by entering your Disqus shortname
 disqusShortname = ""
-# Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-52164311-1"
-
+languageCode = "en-us"
+theme = "hugo-creative-portfolio-theme"
+title = "Peeomid Profile"
 [params]
-  # Style options: default (pink), blue, green, pink, red, sea, violet
-  # Use custom.css for your custom styling
-  style = "default"
-  description = "Peeomid Profile"
-  copyright = "&copy;2016 Osimify"
-  sidebarAbout = [
-    "I am a random person with a wide range of interest:",
-    "Coding, Marketing, Business Process Improvement, Change Management, Personal Development Coaching",    
-    "Above all, Sahaja Yoga is my purpose, free and unique way to balance yourself!",
-    "I put my projects here, some are finished, some are in progress, some are... not yet touched. If you want to see something go live faster, do let me know, I may speed it up :P"
-  ]
-  # Contact page
-     # Since this template is static, the contact form uses www.formspree.io as a
-     # proxy. The form makes a POST request to their servers to send the actual
-     # email. Visitors can send up to a 1000 emails each month for free.
-     #
-     # What you need to do for the setup?
-     #
-     # - set your email address under 'email' below
-     # - upload the generated site to your server
-     # - send a dummy email yourself to confirm your account
-     # - click the confirm link in the email from www.formspree.io
-     # - you're done. Happy mailing!
-  email = "luan.nguyensj@gmail.com"
-
-  # Nav links in the side bar
-  [[params.navlinks]]
-  name = "Home"
-  url = ""
-
-  [[params.navlinks]]
-  name = "About"
-  url = "about/"
-
-  [[params.navlinks]]
-  name = "Get in touch"
-  url = "contact/"
-
-  [params.social]
-  facebook     = "https://www.facebook.com/luantn"
-  googleplus   = "https://plus.google.com/+LuanNguyenPeeomid"
-  email        = "luan.nguyensj@gmail.com"
-  twitter      = "https://twitter.com/peeomid"
-  linkedIn     = "https://www.linkedin.com/in/luantn"
-  stackverflow = "http://stackoverflow.com/users/2799495/luan-nguyen"
+copyright = "&copy;2016 Osimify"
+description = "Peeomid"
+email = "luan.nguyensj@gmail.com"
+sidebarAbout = ["I am a random person with a wide range of interest:", "Coding, Marketing, Business Process Improvement, Change Management, Personal Development Coaching", "Above all, Sahaja Yoga is my purpose, free and unique way to balance yourself!", "I put my projects here, some are finished, some are in progress, some are... not yet touched. If you want to see something go live faster, do let me know, I may speed it up :P"]
+style = "default"
+[params.social]
+email = "luan.nguyensj@gmail.com"
+facebook = "https://www.facebook.com/luantn"
+googleplus = "https://plus.google.com/+LuanNguyenPeeomid"
+linkedIn = "https://www.linkedin.com/in/luantn"
+stackverflow = "http://stackoverflow.com/users/2799495/luan-nguyen"
+twitter = "https://twitter.com/peeomid"
+[[params.navlinks]]
+name = "Home"
+url = ""
+[[params.navlinks]]
+name = "About"
+url = "about/"
+[[params.navlinks]]
+name = "Get in touch"
+url = "contact/"
