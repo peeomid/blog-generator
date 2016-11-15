@@ -6,7 +6,7 @@ theme = "hugo-creative-portfolio-theme"
 title = "Peeomid Profile"
 [params]
 copyright = "&copy;2016 Osimify"
-description = "Peeomid"
+description = "Peeomid "
 email = "luan.nguyensj@gmail.com"
 sidebarAbout = ["I am a random person with a wide range of interest:", "Coding, Marketing, Business Process Improvement, Change Management, Personal Development Coaching", "Above all, Sahaja Yoga is my purpose, free and unique way to balance yourself!", "I put my projects here, some are finished, some are in progress, some are... not yet touched. If you want to see something go live faster, do let me know, I may speed it up :P"]
 style = "default"
