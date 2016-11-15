@@ -1,8 +1,9 @@
 +++
 date = "2016-11-05T21:05:33+05:30"
+draft = false
 title = "About me"
-+++
 
++++
 I'm a freelance developer, focusing on:
 
  - System Design
