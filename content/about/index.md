@@ -12,7 +12,7 @@ I'm a freelance developer, focusing on:
 
 I'm spending half of my time for managing and developing a special children center (children with some difficulty) called [Cadeaux](https://www.facebook.com/thamvantamlydanang). I love improving business processes, and always to try to make it work with people and tech.
 
-I aslo instruct a meditation technique called Sahaja Yoga for free. It's a simple, not time-consuming meditation technique :).
+I aslo instruct a meditation technique called Sahaja Yoga for free. It's a simple, not time-consuming meditation technique :)
 
 The remaining time I use to think about ideas to develop community, and I'm trying to start some small businesses as a test.
 
