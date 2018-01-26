@@ -1,6 +1,5 @@
 +++
 date = "2016-11-15T13:00:25+05:30"
-draft = false
 title = "Get in touch"
 
 +++

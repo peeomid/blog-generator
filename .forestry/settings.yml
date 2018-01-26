@@ -1,0 +1,16 @@
+---
+upload_path: "/static/forestryio/images"
+frontmatter_file_url_template: "/forestryio/images"
+body_file_url_template: "/forestryio/images"
+new_page_extension: md
+auto_deploy: true
+admin_path: "/admin"
+webhook_url: 
+sections:
+  about:
+    default_front_matter_template: about
+  contact:
+    default_front_matter_template: contact
+  portfolio:
+    default_front_matter_template: portfolio
+version: '0.17'
